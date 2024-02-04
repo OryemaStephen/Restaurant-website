@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Home - Eat Up</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html"><img id="logo" src="/images/header-logo.png" alt="logo"></a>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul id="nav-menu">
+                <li>
+                    <a href="index.html" id="nav-link">Home</a>
+                </li>
+                <li>
+                    <a href="src/menu.html" id="nav-link">Menu</a>
+                </li>
+                <li>
+                    <a href="/src/about.html" id="nav-link">About Us</a>
+                </li>
+                <li>
+                    <a href="/src/contact.html" id="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <section id="slideSection" class="slideSection">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img id="slide-img" src="/images/steak.jpg" Alt="Slide1 Image">
+              <div class="text">
+                <h1>Eat Up</h1>
+                <p>Eat better</p>
+                <button>Order Now</button>
+              </div>
+            </div>
+            
+            <div class="mySlides fade">
+              <img id="slide-img" src="/images/vegetables.jpg" Alt="Slide2 Image">
+              <div class="text">
+                <h1>Eat Up</h1>
+                <p>Eat better</p>
+                <button>Order Now</button>
+              </div>
+            </div>
+            
+            <div class="mySlides fade">
+              <img id="slide-img" src="/images/fish fries.jpg" Alt="Slide3 Image">
+              <div class="text">
+                <h1>Eat Up</h1>
+                <p>Eat better</p>
+                <button>Order Now</button>
+              </div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>           
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
