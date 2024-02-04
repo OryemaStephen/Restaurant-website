@@ -16,9 +16,27 @@ document.querySelectorAll('#nav-link').forEach(anchor=>{
     })
 })
 
+window.addEventListener('scroll', function() {
+  let header = document.getElementById('header');
+  let section = document.getElementById('slideSection');
+  
+  // Get the top position of the section element
+  let sectionTop = section.getBoundingClientRect().top;
+
+  // Change header opacity and height when section top reaches the bottom of the header
+  if (sectionTop <= header.clientHeight) {
+    header.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; 
+    header.style.height = '80px';
+  } else {
+    header.style.backgroundColor = 'rgba(0, 0, 0, 1)';
+    header.style.height = '100px';
+  }
+});
+
+
+
 
 //Slide show
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -26,6 +44,9 @@ function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
 function showSlides(n) {
   let i;
@@ -35,6 +56,18 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex-1].style.display = "block"; 
 }
+
+setInterval(function() {
+  plusSlides(1); 
+}, 5000);
+
+
+//Set automatic copyright year
+function getYear(){
+  let today = new Date();
+document.getElementById('year').innerText = today.getFullYear();
+};
+
+getYear();

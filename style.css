@@ -6,27 +6,30 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }  
+
 body {
-    background: #fff;
-    color: #0d0c0c;
+    background: #000;
     font-size: 16px;
     width: 100%;
 }
 
 header {
-    background: #000;
+    background-color: rgba(0, 0, 0,1);
     width: 100%;
-    height: 70px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
     position: fixed;
     z-index: 999;
+    transition: height 0.05s ease, background-color 0.05s ease;
+    top: 0;
 }
 
 header .logo {
@@ -74,42 +77,50 @@ header nav ul li a.active {
 
 .slideSection{
     width: 100%;
-    padding-top: 70px;
-    height: 60vh;
+    margin-top: 100px;
 }
 .mySlides {
     display: none;
     width: 100%;
-    height: 50%;
+    height: 40%;
 }
 #slide-img {
-    vertical-align: middle;
+    vertical-align: top;
     width: 100%;
-    height: 100%;
+    height: 70%;
 }
 
 /* Slideshow container */
 .slideshow-container {
   max-width: 100%;
   position: relative;
-  margin: auto;
+  margin:0 auto;
 }
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 30%;
+  top: 35%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 50px;
-  transition: 0.6s ease;
+  font-size: 6vw;
+  opacity: 0;
+  transition: opacity 0.8s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
   z-index: 2;
+}
+
+.slideshow-container:hover .next {
+    opacity: 1;
+}
+
+.slideshow-container:hover .prev {
+    opacity: 1;
 }
 
 /* Position the "next button" to the right */
@@ -118,49 +129,163 @@ header nav ul li a.active {
   border-radius: 3px 0 0 3px;
 }
 
+
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+  opacity: 0.1;
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 40%;
-  right: 40%;
+  left: 2%;
   width: 90%;
-  text-align: center;
+  text-align: left;
   height: auto;
-  color: #f59a33;
+  
 }
 
-.text h1{
-    font-size: 80px;    
+.text h1{ 
+    font-size: 5vw;   
+    color: #f59a33;
+    text-transform: uppercase;
 }
 
 .text p{
+    font-size: 3vw; 
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.text a{
+    width: 20vw;
+    height: auto;
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 4px 20px 4px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #f59a33;
+    color: #000;
+}
+
+ .text a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+#home-menu{
+    width: 100%;
+    height: fit-content;
+    background-color: #f59a33;
+    color: #fff;
+    margin-top: -18px;
+    text-align: center;
+    padding: 30px auto;
+}
+
+.home-menu-container{
+    width: 95%;
+    margin: auto;
+    --auto-grid-min-size: 18rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 2fr));
+    grid-gap: 0.5rem;
+    padding-bottom: 50px;
+}
+
+#home-menu-div{
+    width: 100%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home-menu-div span{
+    font-size: 150px;
+    color: #000;
+}
+
+#home-menu-div h1{
     font-size: 40px;
+    color: #000;
 }
 
-.text button{
-    width: 170px;
-    font-size: 30px;
-    border-radius: 10px;
+#home-menu-div p{
+    font-size: 20px;
+    margin: 10px auto 40px auto;
 }
 
-/* Fading animation */
-/* .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+#home-menu-div a{
+    width: auto;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 20px 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    margin-top: 10px;
 }
 
-@keyframes fade {
-  from {opacity: 0.4} 
-  to {opacity: 1}
-} */
+#home-menu-div a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+#specials{
+    width: 100%;
+    height:fit-content;
+    background-color: #fff;
+    padding: 30px auto;
+    text-align: center;
+}
+
+
+#specials h1{
+    font-size: 40px;
+    padding: 90px auto;
+}
+
+#special-container{
+    width: 98%;
+    margin: auto;
+    --auto-grid-min-size: 18rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 2fr));
+    grid-gap: 0.5rem;
+}
+
+#special-img{
+    width: 400px;
+    height: auto;
+    border-radius: 1000000000px;
+}
+
+footer{
+    width: 100%;
+    height: 40px;
+    background-color: #f59a33;
+    text-align: center;
+}
 
 
 
