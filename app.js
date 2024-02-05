@@ -18,7 +18,7 @@ document.querySelectorAll('#nav-link').forEach(anchor=>{
 
 window.addEventListener('scroll', function() {
   let header = document.getElementById('header');
-  let section = document.getElementById('slideSection');
+  let section = document.getElementsByClassName('scrollSection')[0];
   
   // Get the top position of the section element
   let sectionTop = section.getBoundingClientRect().top;
@@ -59,9 +59,9 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
 }
 
-setInterval(function() {
-  plusSlides(1); 
-}, 5000);
+// setInterval(function() {
+//   plusSlides(1); 
+// }, 5000);
 
 
 //Set automatic copyright year
