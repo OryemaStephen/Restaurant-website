@@ -499,14 +499,14 @@ footer{
     grid-gap: 2em;
 }
 
-#menu-container-category div:first-child{
+.food-menu{
     width: 95%;
     margin: auto;
-    text-align: center;
+    text-align: left;
     padding-left: 10px;
 }
 
-#menu-container-category div:first-child h2{
+.food-menu h2{
     font-size: 30px;
     color: #fff;
     font-weight: bold;
@@ -514,23 +514,20 @@ footer{
     background-color: #f59a33;
 }
 
-#menu-container-category div:first-child .food-name{
-    font-size: 20px;
-    height: 40px;
+
+.food-menu {
+    background-color: #fff;
+    width: 100%;
 }
 
-#menu-container-category div:first-child .food-price{
-    font-size: 20px;
-    margin-left: 100px;
-    margin-top: 20px;
+.food{
+    display: flex;
+    width: 100%;
 }
 
-
-
-#menu-container-category div:nth-child(2){
+#menu-container-category div:nth-child(1){
     width: 95%;
     margin: 10px 0 10px auto;
-    background-color: #f59a33;
     border-top-left-radius: 170px;
     border-bottom-left-radius: 170px;
     text-align: left;
@@ -544,6 +541,7 @@ footer{
     border-radius: 50%;
     
 }
+
 
 #menu-container div:nth-child(4) {
      display: flex;
