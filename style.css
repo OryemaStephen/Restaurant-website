@@ -566,6 +566,29 @@ footer{
     border-radius: 50%;
 }
 
+.order-btn{
+    width: 100%;
+    margin: auto;
+}
+
+.order-btn a{
+    width: 8vw;
+    height: auto;
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 0.5vw 2vw;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #f59a33;
+    color: #000;
+}
+
+.menu-text a:hover{
+    background-color: #000;
+    color: #fff;
+
+}
+
 #about-desc{
     width: 100%;
     background-color: #f59a33;

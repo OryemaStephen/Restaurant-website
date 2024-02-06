@@ -1,4 +1,3 @@
-//Add smooth scroll behaviour and highlight clicked menu.
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -6,15 +5,38 @@ const navMenu = document.querySelector(".nav-menu");
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-})
+});
 
+// Smooth scroll behavior and highlight clicked menu
+document.querySelectorAll('.nav-menu a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        // Remove 'active' class from all menu items
+        document.querySelectorAll('.nav-menu a').forEach(item => {
+            item.classList.remove('active');
+        });
 
-document.querySelectorAll('#nav-link').forEach(anchor=>{
-    anchor.addEventListener('click',()=>{
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-    })
-})
+        // Add 'active' class to the clicked menu item
+        this.classList.add('active');
+
+        // Smooth scroll behavior
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const offsetTop = targetElement.offsetTop;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+
+        // Close the navigation menu if it's open
+        // hamburger.classList.remove("active");
+        // navMenu.classList.remove("active");
+    });
+});
+
 
 window.addEventListener('scroll', function() {
   let header = document.getElementById('header');
