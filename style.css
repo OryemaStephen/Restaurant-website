@@ -465,118 +465,144 @@ footer{
     background-color: #fff;
 }
 
-#menu-section{
+#menu-section {
     width: 100%;
-    height: fit-content;
     background-color: #fff;
-    color: #000;
-    margin: auto;
+    height: fit-content;
 }
 
 #main-menu-container{
     width: 100%;
-    text-align: center;
     margin: auto;
 }
 
 #main-menu-container h1{
+    text-align: center;
     font-size: 40px;
-    font-weight: bold;
-    padding: 20px 0 0 0;
-    margin: auto;
+    padding-top: 20px;
 }
 
-#menu-container {
+#menu-container{
     width: 100%;
     margin: auto;
 }
 
-#menu-container-category{
+#menu-container-category1{
     width: 100%;
-     --auto-grid-min-size: 18rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 1fr));
-    grid-gap: 2em;
-}
-
-.food-menu{
-    width: 95%;
     margin: auto;
-    text-align: left;
-    padding-left: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.food-menu h2{
+#menu-container-category2 {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.food-menu1{
+    width: 90%;
+    margin: 0 auto;
+    padding-right: 70px;
+}
+
+.food-menu2{
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 70px;
+}
+
+.food-menu1 h2, .food-menu2 h2{
+    text-align: center;
+    padding: 5px;
     font-size: 30px;
-    color: #fff;
-    font-weight: bold;
-    margin: 10px auto;
     background-color: #f59a33;
 }
 
-
-.food-menu {
-    background-color: #fff;
-    width: 100%;
-}
-
-.food{
+.food {
     display: flex;
     width: 100%;
+    margin: 20px auto;
+    justify-content: space-around;
 }
 
-#menu-container-category div:nth-child(1){
-    width: 95%;
-    margin: 10px 0 10px auto;
+.food-cat{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-name, .food-price{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+.menu-img-container1{
+    width: 90%;
+    margin: auto;
+    justify-content: left;
+    background-color: #f59a33;
     border-top-left-radius: 170px;
     border-bottom-left-radius: 170px;
-    text-align: left;
 }
 
+.menu-img-container2{
+    width: 90%;
+    margin: auto;
+    text-align: right;
+    background-color: #f59a33;
+    border-top-right-radius: 170px;
+    border-bottom-right-radius: 170px;
+}
 
-.menu-img-container img{
-    padding-top: 4px;
+.menu-img-container1 img, .menu-img-container2 img{
     width: 350px;
-    height: auto;
     border-radius: 50%;
-    
 }
 
-
-#menu-container div:nth-child(4) {
-     display: flex;
-     flex-direction: row-reverse;
-}
-
-#menu-container div:nth-child(4) .menu-img-container {
-    width: 95%;
-    margin: 10px 0 10px auto;
+#about-desc{
+    width: 100%;
     background-color: #f59a33;
-    border-top-right-radius: 170px;
-    border-bottom-right-radius: 170px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    text-align: right;
+    height: fit-content;
+    color: #000;
 }
 
-#menu-container div:nth-child(3) {
-     display: flex;
-     flex-direction: row-reverse;
+#about-desc h3{
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
 }
 
-#menu-container div:nth-child(3) .menu-img-container {
-    width: 95%;
-    margin: 10px 0 10px auto;
+#about-desc p{
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+}
+
+#contact-desc{
+    width: 100%;
     background-color: #f59a33;
-    border-top-right-radius: 170px;
-    border-bottom-right-radius: 170px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    text-align: right;
+    height: fit-content;
+    color: #000;
 }
 
+#contact-desc h3{
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
 
-
+#contact-desc p{
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+}
 
 
 @media only screen and (max-width: 625px) {
@@ -628,5 +654,20 @@ footer{
 @media only screen and (max-width: 900px){
     header nav ul li a{
         margin: 0 10px;
+    }
+
+    
+    #menu-container-category1, 
+    #menu-container-category2, 
+    #menu-container-category3, 
+    #menu-container-category4, 
+    #menu-container-category5{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .food-menu{
+        width: 100%;
+    padding-right: 0;
     }
 }
