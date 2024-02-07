@@ -31,9 +31,6 @@ document.querySelectorAll('.nav-menu a').forEach(anchor => {
             });
         }
 
-        // Close the navigation menu if it's open
-        // hamburger.classList.remove("active");
-        // navMenu.classList.remove("active");
     });
 });
 
@@ -56,8 +53,6 @@ window.addEventListener('scroll', function() {
 });
 
 
-
-
 //Slide show
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -69,27 +64,30 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  if (n > slides.length) {
+      slideIndex = 1;
+  }    
+  if (n < 1) {
+      slideIndex = slides.length;
   }
-  slides[slideIndex-1].style.display = "block"; 
-}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex - 1].style.display = "block"; 
+}s
 
-// setInterval(function() {
-//   plusSlides(1); 
-// }, 5000);
+
+setInterval(function() {
+plusSlides(1); 
+}, 5000);
 
 
 //Set automatic copyright year
 function getYear(){
   let today = new Date();
-document.getElementById('year').innerText = today.getFullYear();
+  document.getElementById('year').innerText = today.getFullYear();
 };
-
 getYear();
