@@ -54,40 +54,56 @@ window.addEventListener('scroll', function() {
 
 
 //Slide show
-let slideIndex = 1;
-showSlides(slideIndex);
+document.addEventListener('DOMContentLoaded', function() {
+  let slideIndex = 1;
+  showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {
-      slideIndex = 1;
-  }    
-  if (n < 1) {
-      slideIndex = slides.length;
+  function plusSlides(n) {
+      showSlides(slideIndex += n);
   }
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+
+  function currentSlide(n) {
+      showSlides(slideIndex = n);
   }
-  slides[slideIndex - 1].style.display = "block"; 
-}s
 
+  function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {
+          slideIndex = 1;
+      }    
+      if (n < 1) {
+          slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      slides[slideIndex - 1].style.display = "block"; 
+  }
 
-setInterval(function() {
-plusSlides(1); 
-}, 5000);
+  // Set up event listeners for slide navigation
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+
+  prevButton.addEventListener('click', function() {
+      plusSlides(-1);
+  });
+
+  nextButton.addEventListener('click', function() {
+      plusSlides(1);
+  });
+
+  // Automatic slide advancement every 5 seconds
+  setInterval(function() {
+      plusSlides(1); 
+  }, 4000);
+});
+
 
 
 //Set automatic copyright year
 function getYear(){
-  let today = new Date();
-  document.getElementById('year').innerText = today.getFullYear();
-};
+const today = new Date();
+document.getElementById('year').innerText = today.getFullYear()
+}
 getYear();
