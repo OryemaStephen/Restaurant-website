@@ -96,7 +96,7 @@ header nav ul li a.active {
 #slide-img {
     vertical-align: top;
     width: 100%;
-    height: auto;
+    height: 70vh;
     object-fit: cover;
 }
 
@@ -156,14 +156,16 @@ header nav ul li a.active {
 
 .text h1{ 
     font-size: 2em;   
-    color: #f59a33;
+    color: #fff;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .text p{
     font-size: 1.6em; 
     color: #fff;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .text a{
@@ -265,9 +267,10 @@ header nav ul li a.active {
 }
 
 #specials > div{
-    width: 95%;
+    width: 100%;
     margin: auto;
-    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 #specials > div> h1{
@@ -285,6 +288,8 @@ header nav ul li a.active {
 }
 
 #special-container > div{
+    width: 100%;
+    margin: auto;
     text-align: center;
 }
 
@@ -292,6 +297,7 @@ header nav ul li a.active {
     width: 300px;
     height: auto;
     border-radius: 50%;
+    margin: auto;
 }
 
 #special-container > div > h2 {
@@ -347,6 +353,7 @@ header nav ul li a.active {
 
 #contact-about p{
     margin: 10px;
+    font-size: 1.2em;
 }
 
 #contact-about img{
@@ -446,8 +453,8 @@ footer{
 .menu-header-img{
     width: 100%;
     vertical-align: top;
-    height: auto;
-    object-fit: contain;
+    height: 70vh;
+    object-fit: cover;
 }
 
 .menu-text{
