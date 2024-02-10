@@ -654,6 +654,86 @@ footer{
     font-size: 1.2em;
 }
 
+#food-category{
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+#food-category h2{
+    font-size: 1.8em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#food-category select{
+    font-size: 1.1em;
+    margin: 15px auto;
+}
+
+.food-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+}
+
+#food-product{
+    margin: 10px  auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: #f59a33;
+}
+
+
+#food-product:hover{
+    transform: scale(1.05);
+}
+
+#food-img{
+    width: 300px;
+    height: auto;
+    margin: auto;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#food-img:hover{
+    opacity: 0.9;
+}
+
+#food-header{
+    font-size: 1.1em;
+    margin: 5px auto;
+}
+
+#foo-product p{
+    font-size: 1em;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#food-cost {
+    font-weight: bold;
+}
+
+#add-to-cart{
+    width: 120px;
+    font-size: 1.2em;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#add-to-cart:hover{
+    color: #f59a33;
+    background-color: #000;
+}
 
 @media only screen and (max-width: 625px) {
     .hamburger {
@@ -664,10 +744,12 @@ footer{
     .hamburger.active div:nth-child(2) {
         opacity: 0;
     }
-      .hamburger.active div:nth-child(1) {
+
+    .hamburger.active div:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-      .hamburger.active div:nth-child(3) {
+
+    .hamburger.active div:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
@@ -680,12 +762,15 @@ footer{
         padding: 30px;
         transition: 0.3s;
     }
+
     header #nav_check:checked ~ nav {
         left: 0;
     }
+
     header nav ul {
         display: block;
     }
+
     header nav ul li a {
         margin: 5px 0;
     }
@@ -705,7 +790,6 @@ footer{
     header nav ul li a{
         margin: 0 10px;
     }
-
     
     #menu-container-category1, 
     #menu-container-category2, 
