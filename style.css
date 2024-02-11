@@ -740,6 +740,13 @@ footer{
     height: auto;
 }
 
+.cart-section {
+    width: 100%;
+    min-height: 75vh;
+    background-color: #fff;
+    text-align: center;
+}
+
 @media only screen and (max-width: 625px) {
     .hamburger {
         display: block;
