@@ -735,6 +735,11 @@ footer{
     background-color: #000;
 }
 
+#cart-icon {
+    width: 25px;
+    height: auto;
+}
+
 @media only screen and (max-width: 625px) {
     .hamburger {
         display: block;
