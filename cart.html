@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="icon" type="image/png" href="/images/header-logo.png">
     <link rel="stylesheet" href="style.css">
-    <title>About Us - Eat Up</title>
+    <title>Cart - Eat Up</title>
 </head>
 <body>
     <header id="header">
@@ -46,46 +46,43 @@
     </header>
 
     <section id="scrollSection" class="scrollSection cart-section">
-        <h1 class="cart-header">Receipts</h1>
-        <div class="cart-receipt-row">                
-            <span class="item-header item-column">Product Name</span>
-            <span class=" item-header item-column">Quantity</span>
-            <span class="item-header item-column">Price</span>                
-        </div><hr>
-        <div class="receipt-item">
-            <div class="receipt-div">
-                <span>
-                    <img src="Plain tshirt.jpg" width="70px" height="70px">
-                </span>
-                <span class="item-title">Tshirt</span>
-                                   
-                <span><input type="number" value="1" min="0" class="item-quantity"></span> 
-                <span class="item-price">$6</span>                                   
-                <span>                        
-                    <button type="button" class="remove-Btn">REMOVE</button>
-                </span>
+        <div id="receipt-container">
+            <h1 class="cart-header">Receipt</h1>
+            <div class="cart-receipt-row">                
+                <span class="item-header"> Meal Name</span>
+                <span class=" item-header">Quantity</span>
+                <span class="item-header">Price</span>                
             </div>
-            <div class="receipt-div">
-                <span>
-                    <img src="Sneakers.jpg" width="70px" height="70px">
-                </span>
-                <span class="item-title">Sneakers</span>
-                <span><input type="number" value="1" min="0" class="item-quantity"></span>
-
-                <span class="item-price">$10</span>
-                                
-                <span>
-                    <button type="button" class="remove-Btn">REMOVE</button>
-                </span>
+            <div class="receipt-item">
+                <div class="receipt-div">
+                    <span>
+                        <img src="/images/burger.jpg" width="70px" height="70px">
+                    </span>
+                    <span class="item-title">Burger</span>                                   
+                    <span><input type="number" value="1" min="1" class="item-quantity"></span> 
+                    <span class="item-price">$6</span>                                   
+                    <span>                        
+                        <button type="button" class="remove-btn">REMOVE</button>
+                    </span>
+                </div>
+                <div class="receipt-div">
+                    <span>
+                        <img src="/images/burger.jpg" width="70px" height="70px">
+                    </span>
+                    <span class="item-title">Burger</span>
+                                    
+                    <span><input type="number" value="1" min="1" class="item-quantity"></span> 
+                    <span class="item-price">$6</span>                                   
+                    <span>                        
+                        <button type="button" class="remove-btn">REMOVE</button>
+                    </span>
+                </div>
             </div>
-        </div><br>
-        <hr>
-        <div id="total">
-            <span><strong>Total:</strong></span>
-            <span class="total-cost">$16</span>
-        </div>
-        <div>
-            <button type="button" class="purchase-Btn" >PURCHASE</button>
+            <div id="total">
+                <span><strong>Total:</strong></span>
+                <span class="total-cost">$16</span><br>
+                <button type="button" id="purchase-btn" >PURCHASE</button>
+            </div>
         </div>
     </section>
 

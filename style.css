@@ -723,6 +723,7 @@ footer{
     font-weight: bold;
 }
 
+/* Cart Page */
 #add-to-cart{
     width: 120px;
     font-size: 1.2em;
@@ -742,9 +743,94 @@ footer{
 
 .cart-section {
     width: 100%;
+    padding: 20px;
     min-height: 75vh;
     background-color: #fff;
+}
+
+#receipt-container{
+    width: 80%;
+    margin: auto;
+    border: 2px solid #9f9c9c;
+    border-radius: 10px;
+}
+
+.cart-header{
+    font-size: 1.8em;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
+}
+
+.cart-receipt-row{
+    width: 55%;
+    margin: auto;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-header{
+    font-weight: bold;
+}
+
+.receipt-item{
+    width: 100%;
+}
+
+
+.receipt-div{
+    width: 60%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.receipt-div span{
+    padding: 2px;
+}
+
+.receipt-div span img{
+    border-radius: 10px;
+}
+
+.receipt-div span input{
+    width: 70px;
+}
+
+.remove-btn{
+    cursor: pointer;
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+#total{
+    width: 100%;
+    margin:20px auto;
+    display: inline-block;
+    text-align: center;
+}
+
+#total button{
+    cursor: pointer;
+    margin: 20px auto;
+    width: 140px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+#total button:hover{
+    background-color: #f59a33;
+    color: #000;
 }
 
 @media only screen and (max-width: 625px) {
@@ -795,6 +881,14 @@ footer{
     #menu-container div:nth-child(4) {
      display: flex;
      flex-direction: column;
+    }
+
+    .receipt-div{
+        width: 100%;
+    }
+
+    .cart-receipt-row{
+        width: 80%;
     }
 }
 

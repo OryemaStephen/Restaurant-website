@@ -107,3 +107,26 @@ const today = new Date();
 document.getElementById('year').innerText = today.getFullYear()
 }
 getYear();
+
+//Cart page
+
+
+
+//Remove cart Item
+let removeBtns = document.querySelectorAll('.remove-btn');
+
+removeBtns.forEach(removeBtn => {
+    removeBtn.addEventListener('click', function(){
+        const cartItem = this.closest('.receipt-div');
+        if (cartItem) {
+            cartItem.remove();
+        }
+    });
+});
+
+//Purchase button
+const purchaseBtn = document.getElementById('purchase-btn');
+purchaseBtn.addEventListener('click', function() {
+    alert('Button clicked!');
+});
+
