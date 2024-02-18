@@ -110,8 +110,6 @@ getYear();
 
 //Cart page
 
-
-
 //Remove cart Item
 let removeBtns = document.querySelectorAll('.remove-btn');
 
@@ -124,9 +122,12 @@ removeBtns.forEach(removeBtn => {
     });
 });
 
-//Purchase button
+
+// Purchase button
 const purchaseBtn = document.getElementById('purchase-btn');
 purchaseBtn.addEventListener('click', function() {
-    alert('Button clicked!');
+    alert('Thanks for shopping with us!');
 });
+
+
 

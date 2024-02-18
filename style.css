@@ -336,6 +336,12 @@ header nav ul li a.active {
     grid-gap: 0.5rem;
 }
 
+#contact-map iframe{
+    width: 95%;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+}
 
 #contact-about{
     width: 95%;
@@ -724,14 +730,14 @@ footer{
 }
 
 /* Cart Page */
-#add-to-cart{
+.add-to-cart{
     width: 120px;
     font-size: 1.2em;
     margin: 20px;
     border-radius: 5px;
 }
 
-#add-to-cart:hover{
+.add-to-cart:hover{
     color: #f59a33;
     background-color: #000;
 }
@@ -889,6 +895,17 @@ footer{
 
     .cart-receipt-row{
         width: 80%;
+    }
+
+    #receipt-container{
+        width: 100%;
+        margin: auto;
+        border: 2px solid #9f9c9c;
+        border-radius: 10px;
+    }
+
+    #contact-map iframe{
+        width: 100%;
     }
 }
 
